@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+      <title>profitAlgo</title>
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+      <style>
+
+          body {
+            font-family: 'Raleway', sans-serif;
+            text-align: center;
+          }
+
+      </style>
+
+  </head>
+
+  <body>
+
+      <script>
+
+        function calculate() {
+          profGrade = prompt('Your proficiency-based grade:');
+          profGrade = profGrade.replace(',', '.');
+          profGrade = parseFloat(profGrade);
+          document.getElementById('gradeProf').innerHTML = 'Proficiency: ' + profGrade;
+          document.getElementById('gradePerc').innerHTML = 'Percent: Calculating ...';
+
+          if (profGrade === 1) {
+            gradePerc = 0;
+          } else if (profGrade > 1 && profGrade < 2) {
+
+            if (profGrade < 1.1) {
+              gradePerc = 0;
+            } else if (profGrade >= 1.1 && profGrade < 1.2) {
+              gradePerc = (35.5 / 10);
+            } else if (profGrade >= 1.2 && profGrade < 1.3) {
+              gradePerc = (35.5 / 10) * 2;
+            } else if (profGrade >= 1.3 && profGrade < 1.4) {
+              gradePerc = (35.5 / 10) * 3;
+            } else if (profGrade >= 1.4 && profGrade < 1.5) {
+              gradePerc = (35.5 / 10) * 4;
+            } else if (profGrade >= 1.5 && profGrade < 1.6) {
+              gradePerc = (35.5 / 10) * 5;
+            } else if (profGrade >= 1.6 && profGrade < 1.7) {
+              gradePerc = (35.5 / 10) * 6;
+            } else if (profGrade >= 1.7 && profGrade < 1.8) {
+              gradePerc = (35.5 / 10) * 7;
+            } else if (profGrade >= 1.8 && profGrade < 1.9) {
+              gradePerc = (35.5 / 10) * 8;
+            } else if (profGrade >= 1.9 && profGrade < 2) {
+              gradePerc = (35.5 / 10) * 9;
+            }
+
+          } else if (profGrade === 2) {
+            gradePerc = 35.5;
+          } else if (profGrade > 2 && profGrade < 3) {
+
+            if (profGrade < 2.1) {
+              gradePerc = 35.5;
+            } else if (profGrade >= 2.1 && profGrade < 2.2) {
+              gradePerc = 35.5 + 1 * (70 - 35.5) / 10;
+            } else if (profGrade >= 2.2 && profGrade < 2.3) {
+              gradePerc = 35.5 + 2 * (70 - 35.5) / 10;
+            } else if (profGrade >= 2.3 && profGrade < 2.4) {
+              gradePerc = 35.5 + 3 * (70 - 35.5) / 10;
+            } else if (profGrade >= 2.4 && profGrade < 2.5) {
+              gradePerc = 35.5 + 4 * (70 - 35.5) / 10;
+            } else if (profGrade >= 2.5 && profGrade < 2.6) {
+              gradePerc = 35.5 + 5 * (70 - 35.5) / 10;
+            } else if (profGrade >= 2.6 && profGrade < 2.7) {
+              gradePerc = 35.5 + 6 * (70 - 35.5) / 10;
+            } else if (profGrade >= 2.7 && profGrade < 2.8) {
+              gradePerc = 35.5 + 7 * (70 - 35.5) / 10;
+            } else if (profGrade >= 2.8 && profGrade < 2.9) {
+              gradePerc = 35.5 + 8 * (70 - 35.5) / 10;
+            } else if (profGrade >= 2.9 && profGrade < 3) {
+              gradePerc = 35.5 + 9 * (70 - 35.5) / 10;
+            }
+
+          } else if (profGrade === 3) {
+            gradePerc = 70;
+          } else if (profGrade > 3 && profGrade < 3.5) {
+
+            if (profGrade < 3.1) {
+              gradePerc = 70;
+            } else if (profGrade >= 3.1 && profGrade < 3.2) {
+              gradePerc = 70 + 1 * (100 - 70) / 5;
+            } else if (profGrade >= 3.2 && profGrade < 3.3) {
+              gradePerc = 70 + 2 * (100 - 70) / 5;
+            } else if (profGrade >= 3.3 && profGrade < 3.4) {
+              gradePerc = 70 + 3 * (100 - 70) / 5;
+            } else if (profGrade >= 3.4 && profGrade < 3.5) {
+              gradePerc = 70 + 4 * (100 - 70) / 5;
+            }
+
+          } else if (profGrade === 3.5) {
+            gradePerc = 100;
+          } else if (profGrade > 3.5 && profGrade < 4) {
+
+            if (profGrade < 3.6) {
+              gradePerc = 100;
+            } else if (profGrade >= 3.6 && profGrade < 3.7) {
+              gradePerc = 100 + 1 * (105 - 100) / 5;
+            } else if (profGrade >= 3.7 && profGrade < 3.8) {
+              gradePerc = 100 + 2 * (105 - 100) / 5;
+            } else if (profGrade >= 3.8 && profGrade < 3.9) {
+              gradePerc = 100 + 3 * (105 - 100) / 5;
+            } else if (profGrade >= 3.9 && profGrade < 4) {
+              gradePerc = 100 + 4 * (105 - 100) / 5;
+            }
+
+          } else if (profGrade === 4) {
+            gradePerc = 105;
+          }
+
+          if (gradePerc <= 59) {
+            letter = 'F';
+          } else if (gradePerc >= 60 && gradePerc <= 69) {
+            letter = "D";
+          } else if (gradePerc >= 70 && gradePerc <= 79) {
+            letter = "C";
+          } else if (gradePerc >= 80 && gradePerc <= 89) {
+            letter = "B";
+          } else if (gradePerc >= 90 && gradePerc <= 100) {
+            letter = "A";
+          }
+
+          document.getElementById('gradePerc').innerHTML = 'Percent: ~' + gradePerc + '% ' + '(' + letter + ')';
+
+        }
+
+      </script>
+
+      <h1>profitAlgo</h1>
+      <h3><i>profitAlgo is an <a href="http://www.dictionary.com/browse/algorithm">algorithm</a> that attempts to convert your <u>profi</u>ciency-based (1 to 4) grade into a percentage.</i></h3>
+      <h6><i>Note: This algorithm assumes that a grade of 1 is worth 0%, a 2 is worth 35.5% (the average of 1% and 70%, anything between the grade of 1 and 3), a 3 is worth 70% (a passing grade), 3.5 is 100%, and 4 is worth 105%.</i></h6><br />
+      <div style="width: 300px; border: 25px solid #f44242; margin:0 auto;">
+
+        <h4>Enter your proficiency-based grade:</h4>
+        <h4 id="gradeProf"></h4>
+        <h4 id="gradePerc"></h4>
+        <button onclick="calculate()">Convert Grade</button>
+        <br />
+        <br />
+
+      </div>
+      <br />
+
+  </body>
+
+<html>
